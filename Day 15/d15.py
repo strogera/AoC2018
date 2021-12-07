@@ -170,7 +170,7 @@ def partTwo():
                     if player.isDead():
                         continue
                     if not attack(player, grid, goblins if player.mode == "elf" else elves):
-                        newPos = getMovement(grid, player.pos, goblins if player.mode == "elf" else goblins)
+                        newPos = getMovement(grid, player.pos, goblins if player.mode == "elf" else elves)
                         grid[int(newPos.real)][int(newPos.imag)] = grid[int(player.pos.real)][int(player.pos.imag)]
                         if player.pos != newPos:
                             grid[int(player.pos.real)][int(player.pos.imag)] = '.'
